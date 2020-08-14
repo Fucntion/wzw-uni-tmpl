@@ -1,0 +1,52 @@
+{
+  "name": "o2o-client",
+  "version": "0.0.7",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rimraf unpackage",
+    "lint": "eslint --fix --ext .js --ext .vue",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.wzwtec.com/function/o2o-client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "validate": "^5.1.0",
+    "vuex": "^3.3.0",
+    "weixin-js-sdk": "^1.4.0-test"
+  },
+  "devDependencies": {
+    "@types/html5plus": "^1.0.0",
+    "@types/uni-app": "^1.4.2",
+    "babel-eslint": "^7.2.1",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "uni-(.*)": "@/components/uni-$1.vue"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
